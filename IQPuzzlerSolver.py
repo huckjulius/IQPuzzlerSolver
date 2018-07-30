@@ -222,9 +222,9 @@ def startSolving():
 		elapsedTime = round((startTime - time.time()) * (-1), 2)
 		global totalSolutionsFound
 		if totalSolutionsFound == 1:
-			print('1 solution was found in {0}ms.'.format(elapsedTime))
+			print('1 solution was found in {0}s.'.format(elapsedTime))
 		else:
-			print('{0} solutions were found in {1}ms.'.format(totalSolutionsFound, elapsedTime))
+			print('{0} solutions were found in {1}s.'.format(totalSolutionsFound, elapsedTime))
 		print('done.')
 	else:
 		print('done.')
