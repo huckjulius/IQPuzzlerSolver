@@ -1,4 +1,4 @@
-import sys
+from sys import exit, argv
 from copy import deepcopy
 import os
 import time
@@ -169,7 +169,7 @@ def solve(curPartIndex, curBoard, curParts):
 #this method gets the startsettings, creates the board and starts solving				
 def startSolving():	
 	#get the filepath to the settingsfile of the lvl the user wants to solve 	
-	filename = raw_input('settings filepath:')
+	filename = input('settings filepath:')
 	
 	#check if the file exists
 	if not os.path.isfile(filename):
@@ -212,7 +212,7 @@ def startSolving():
 	for part in notPlacedParts:
 		part.name = converter.convertToNum(part.name)
 	
-	cmd = raw_input('Start? [y, n]')
+	cmd = input('start? [y, n]')
 	
 	if cmd.lower() == 'y':
 		print('searching for solutions...')
@@ -225,13 +225,14 @@ def startSolving():
 			print('1 solution was found in {0}s.'.format(elapsedTime))
 		else:
 			print('{0} solutions were found in {1}s.'.format(totalSolutionsFound, elapsedTime))
+		input('press enter to quit...')
 		print('done.')
 	else:
 		print('done.')
 
 def main(args):
 	#show all directions if the user wants it
-	cmd = raw_input('show all parts? [y, n]:')
+	cmd = input('show all parts? [y, n]:')
 
 	if cmd.lower() == 'y':
 		#show all parts
@@ -247,4 +248,4 @@ def main(args):
 	return 0
 
 if __name__ == '__main__':
-    sys.exit(main(sys.argv))
+    exit(main(argv))
