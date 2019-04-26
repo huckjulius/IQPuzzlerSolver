@@ -1,4 +1,4 @@
-# IQPuzzlerSoler
+# IQPuzzlerSolver
 
 Python script that solves IQ Puzzler levels
 
